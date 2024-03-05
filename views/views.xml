@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!-- Define a tree view for the Employee model -->
+    <record id="view_employee_tree" model="ir.ui.view">
+        <field name="name">employee.tree</field>
+        <field name="model">employee.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="employment_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Define a form view for the Employee model -->
+    <record id="view_employee_form" model="ir.ui.view">
+        <field name="name">employee.form</field>
+        <field name="model">employee.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="birthdate"/>
+                </group>
+                <group name="Employement">
+                    <field name="position"/>
+                    <field name="department"/>
+                    <field name="status"/>
+                    <field name="salary"/>
+                    <field name="manager"/>
+                    <field name="employment_date"/>
+                    
+                </group>
+                <group name="Contact">
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="bank_account_info"/>
+                </group>
+                <group name="Address">
+                    <field name="country"/>
+                    <field name="city"/>
+                    <field name="address"/>
+                </group>
+                <group name="Health and Safty">
+                    <field name="medical_conditions"/>
+                    <field name="allergies"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    
+
+
+    <record id="action_employee_list" model="ir.actions.act_window">
+        <field name="name">Employee List</field>
+        <field name="res_model">employee.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Define menu items to access the views -->
+    <menuitem id="menu_employee" name="Employees"/>
+
+    <menuitem id="menu_employee_list" parent="menu_employee" name="Employee List" action="action_employee_list"/>
+    
+</odoo>
