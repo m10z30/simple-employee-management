@@ -1,6 +1,6 @@
 # Simple Employee Management
 
-This is a simple [odoo](https://github.com/odoo/odoo) to test odoo module development environment.
+This is a simple [odoo](https://github.com/odoo/odoo) module to test odoo module development environment.
 
 The module is simple, just managing a list of `Employees` with basic information.
 
