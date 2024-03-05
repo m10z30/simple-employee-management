@@ -20,33 +20,39 @@
         <field name="model">employee.model</field>
         <field name="arch" type="xml">
             <form>
-                <group>
-                    <field name="name"/>
-                    <field name="birthdate"/>
-                </group>
-                <group name="Employement">
-                    <field name="position"/>
-                    <field name="department"/>
-                    <field name="status"/>
-                    <field name="salary"/>
-                    <field name="manager"/>
-                    <field name="employment_date"/>
-                    
-                </group>
-                <group name="Contact">
-                    <field name="email"/>
-                    <field name="phone"/>
-                    <field name="bank_account_info"/>
-                </group>
-                <group name="Address">
-                    <field name="country"/>
-                    <field name="city"/>
-                    <field name="address"/>
-                </group>
-                <group name="Health and Safty">
-                    <field name="medical_conditions"/>
-                    <field name="allergies"/>
-                </group>
+                <sheet>
+                    <h1>
+                        <field name="name" placeholder="Employee Name"/>
+                    </h1>
+                    <h1>
+                        <field name="birthdate" placeholder="Birth Date"/>
+                    </h1>
+                    <notebook>
+                        <page string="Employement">
+                            <field name="position" placeholder="Position"/>
+                            <field name="department" placeholder="Department"/>
+                            <field name="status" placeholder="Employemnt Status"/>
+                            <field name="salary" placeholder="Salary"/>
+                            <field name="manager" placeholder="Hiring Manger/Employer"/>
+                            
+                            <field name="employment_date" placeholder="Employement Date"/>
+                        </page>
+                        <page string="Contact">
+                            <field name="email" placeholder="Email"/>
+                            <field name="phone" placeholder="Phone Number"/>
+                            <field name="bank_account_info" placeholder="Bank Account Info" />
+                        </page>
+                        <page string="Address">
+                            <field name="country" placeholder="Country" />
+                            <field name="city" placeholder="City"/>
+                            <field name="address" placeholder="Address" />
+                        </page>
+                        <page string="Health and Safty">
+                            <field name="medical_conditions" placeholder="Medical Conditions" />
+                            <field name="allergies" placeholder="Allergies" />
+                        </page>
+                    </notebook>
+                </sheet>
             </form>
         </field>
     </record>
