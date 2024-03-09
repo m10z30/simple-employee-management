@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <!-- Define the view for the Department model -->
+        <record id="view_department_form" model="ir.ui.view">
+            <field name="name">department.model.form</field>
+            <field name="model">department.model</field>
+            <field name="arch" type="xml">
+                <form string="Department Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="department_head"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Define the action to open the Department form view -->
+        <record id="action_department_form" model="ir.actions.act_window">
+            <field name="name">Departments</field>
+            <field name="res_model">department.model</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Define the menu item to access the Department form view -->
+        <menuitem id="menu_department" name="Departments" parent="menu_employee" action="action_department_form"/>
+    </data>
+</odoo>
